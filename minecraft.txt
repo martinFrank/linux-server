@@ -2,3 +2,8 @@ https://github.com/itzg/docker-minecraft-bedrock-server
 
 $> sudo docker volume create mc-volume
 $> sudo docker run -d -it --restart always --name minecraft-bedrock-server -e EULA=TRUE -e GAMEMODE=creative -p 19132:19132/udp -v mc-volume:/data itzg/minecraft-bedrock-server
+
+
+
+https://glimpse.me/blog/reset-minecraft-server/
+$> sudo ls /var/lib/docker/volumes/mc-volume/_data/worlds/'Bedrock level'
