@@ -1,0 +1,18 @@
+Github -> project -> settings -> actions -> runners -> create new runner
+
+https://github.com/myoung34/docker-github-actions-runner
+https://reposhub.com/linux/miscellaneous/myoung34-docker-github-actions-runner.html
+ 
+docker run -d --restart always --name github-runner \
+  -e REPO_URL="https://github.com/martinFrank/poolserver" \
+  -e RUNNER_NAME="pool-server-runner" \
+  -e RUNNER_TOKEN="token" \
+  -e RUNNER_WORKDIR="/tmp/github-runner-poolserver" \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /tmp/github-runner-your-repo:/tmp/github-runner-your-repo \
+  myoung34/github-runner:latest
+  
+  
+runner for pool-server  
+$> sudo docker run -d --restart always --name github-runner-poolserver -e REPO_URL="https://github.com/martinFrank/poolserver" -e RUNNER_NAME="pool-server-runner" -e RUNNER_TOKEN="token" -e RUNNER_WORKDIR="/tmp/github-runner-poolserver" -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/github-runner-your-repo:/tmp/github-runner-your-repo myoung34/github-runner:latest
+
