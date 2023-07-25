@@ -1,0 +1,4 @@
+
+
+
+$> sudo docker run -d --restart always --name poolserver-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres123 -e POSTGRES_DB=pool postgres
