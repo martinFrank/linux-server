@@ -5,5 +5,12 @@ $> sudo docker run -d -it --restart always --name minecraft-bedrock-server -e EU
 
 
 
+CommanderJameso, xuid: 2535447899505323
+
+
+
 https://glimpse.me/blog/reset-minecraft-server/
+
+remove current world
 $> sudo ls /var/lib/docker/volumes/mc-volume/_data/worlds/'Bedrock level'
+$> sudo rm -rf /var/lib/docker/volumes/mc-volume/_data/worlds/'Bedrock level'
