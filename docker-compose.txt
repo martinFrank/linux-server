@@ -1,3 +1,6 @@
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-22-04
 Step 1 — Installing Docker Compose
 To make sure you obtain the most updated stable version of Docker Compose, you’ll download this software from its official Github repository.
 
@@ -20,3 +23,20 @@ $> chmod +x ~/.docker/cli-plugins/docker-compose
 To verify that the installation was successful, you can run:
 
 $> docker compose version
+
+
+
+
+ERROR on using sudo on docker compose:
+---------------------------------------
+
+
+https://stackoverflow.com/questions/70599793/docker-compose-not-recognized-when-using-sudo
+
+
+
+
+I had installed docker-compose under my user's home directory. I had to move the file docker-compose from ~/.docker/cli-plugins to /usr/local/lib/docker/cli-plugins
+
+$> sudo mkdir -p /usr/local/lib/docker/cli-plugins
+$> sudo mv /home/<username>/.docker/cli-plugins/docker-compose /usr/local/lib/docker/cli-plugins/docker-compose
