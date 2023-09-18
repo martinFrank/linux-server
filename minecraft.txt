@@ -6,6 +6,8 @@ $> sudo docker run -d -it --restart always --name minecraft-bedrock-server -e EU
 
 
 CommanderJameso, xuid: 2535447899505323
+NinaXeniaLucky, xuid: 2535456888697769
+RonjaLucky, xuid: 2535438629857103
 
 
 
@@ -25,7 +27,7 @@ $> sudo nano /var/lib/docker/volumes/mc-volume/_data/server.properties
 #server 2
 
 $> sudo docker volume create mc-volume2
-$> sudo docker run -d -it --restart always --name minecraft-bedrock-server2 -e EULA=TRUE -p 19135:19132/udp -v mc-volume2:/data itzg/minecraft-bedrock-server
+$> sudo docker run -d -it --restart always --name minecraft-bedrock-server2 -e EULA=TRUE -e VERSION=1.19 -p 19135:19132/udp -v mc-volume2:/data itzg/minecraft-bedrock-server
 
 
 

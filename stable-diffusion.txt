@@ -1,0 +1,6 @@
+$> docker compose --profile download up --build
+$> docker compose --profile auto-cpu up --build
+http://localhost:7860/
+
+https://github.com/AbdBarho/stable-diffusion-webui-docker
+https://profaneservitor.github.io/sdwui-docs/extensions/
