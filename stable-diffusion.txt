@@ -4,3 +4,6 @@ http://localhost:7860/
 
 https://github.com/AbdBarho/stable-diffusion-webui-docker
 https://profaneservitor.github.io/sdwui-docs/extensions/
+
+
+http://192.168.0.100:7860/
