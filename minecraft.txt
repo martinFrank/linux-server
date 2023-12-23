@@ -52,3 +52,6 @@ $> sudo docker exec bb911c594572 send-command time set 12000
 $> sudo docker exec 66ad2e0f38c1 send-command gamerule showCoordinates true
 $> sudo docker exec xxx send-command 
 
+more structures plugin requires world in experimental mode:
+https://mcpedl.com/more-simple-structures-addon/
+
