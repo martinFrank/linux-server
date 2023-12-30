@@ -50,6 +50,86 @@ $> sudo docker container ls
 $> sudo docker exec bb911c594572 send-command op 2535447899505323
 $> sudo docker exec bb911c594572 send-command time set 12000
 $> sudo docker exec 66ad2e0f38c1 send-command gamerule showCoordinates true
+
+$> sudo docker exec 66ad2e0f38c1 send-command give @a[name=CommanderJameso] diamond_sword 1
+$> sudo docker exec 66ad2e0f38c1 send-command give @a[name=CommanderJameso] anvil 3
+$> sudo docker exec 66ad2e0f38c1 send-command xp 30L @a[name=CommanderJameso]
+
+$> sudo docker exec 66ad2e0f38c1 send-command enchant @a[name=CommanderJameso] sharpness 5
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] fire_aspekt 2 
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] looting 3
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] diamond_helmet 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso]  respiration 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] aqua_affinity 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] projectile_protection 4
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] thorns 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] diamond_chestplate 1 
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] blast_protection 4
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] thorns 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] diamond_leggings 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] swift_sneak 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] protection 4
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] thorns 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] diamond_boots 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] feather_falling 4
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] soul_speed 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] fire_protection 4
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] thorns 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] diamond_pickaxe 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] fortune 3 
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] diamond_pickaxe 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] silk_touch 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] shears 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] silk_touch 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] fishing_rod 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] luck_of_the_sea 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] lure 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] trident 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] impaling 5
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] riptide 3
+oder
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] loyalty 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] channeling 1
+
+$> sudo docker exec 59bc4e4c1f14 send-command give @a[name=CommanderJameso] bow 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3 
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] unbreaking 3
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] mending 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] flame 1
+$> sudo docker exec 59bc4e4c1f14 send-command enchant @a[name=CommanderJameso] infinity 1
+
+
+ 
 $> sudo docker exec xxx send-command 
 
 more structures plugin requires world in experimental mode:
