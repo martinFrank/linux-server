@@ -33,3 +33,70 @@ sudo nano /etc/systemd/system/ddclient.service
 Zeile 7 
 alt: PIDFile=/var/run/ddclient.pid
 neu: PIDFile=/run/ddclient.pid
+
+
+
+
+config: 
+######################################################################
+##
+## Define default global variables with lines like:
+##      var=value [, var=value]*
+## These values will be used for each following host unless overridden
+## with a local variable definition.
+##
+## Define local variables for one or more hosts with:
+##      var=value [, var=value]* host.and.domain[,host2.and.domain...]
+##
+## Lines can be continued on the following line by ending the line
+## with a \
+##
+##
+## Warning: not all supported routers or dynamic DNS services
+##          are mentioned here.
+##
+######################################################################
+daemon=300                              # check every 300 seconds
+syslog=yes                              # log update msgs to syslog
+mail=root                               # mail all msgs to root
+mail-failure=root                       # mail failed update msgs to root
+#pid=/var/run/ddclient.pid              # record PID in file.
+pid=/run/ddclient.pid
+#ssl=yes                                        # use ssl-support.  Works with
+                                        # ssl-library
+# postscript=script                     # run script after updating.  The
+                                        # new IP is added as argument.
+#
+## To obtain an IP address from FW status page (using fw-login, fw-password)
+#use=fw, fw=192.168.1.254/status.htm, fw-skip='IP Address' # found after IP Address
+#
+## To obtain an IP address from Web status page (using the proxy if defined)
+## by default, checkip.dyndns.org is used if you use the dyndns protocol.
+## Using use=web is enough to get it working.
+## WARNING: set deamon at least to 600 seconds if you use checkip or you could
+## get banned from their service.
+#use=web, web=checkip.dyndns.org/, web-skip='IP Address' # found after IP Address
+#
+#use=ip,                     ip=127.0.0.1       # via static IP's
+#use=if,                     if=eth0            # via interfaces
+#use=web                                        # via web
+use=web, web=checkip.dyndns.org/, web-skip='IP Address'
+#
+#protocol=dyndns2                               # default protocol
+protocol=dyndns2
+#proxy=fasthttp.sympatico.ca:80                 # default proxy
+#server=members.dyndns.org                      # default server
+#server=members.dyndns.org:8245                 # default server (bypassing proxies)
+server=freedns.afraid.org
+
+#login=your-login                               # default login
+login=xxx
+#login=xxx
+#password=test                                  # default password
+password=xxx
+#mx=mx.for.your.host                            # default MX
+#backupmx=yes|no                                # host is primary MX?
+#wildcard=yes|no                                # add wildcard CNAME?
+elitegames.chickenkiller.com
+
+
