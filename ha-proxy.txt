@@ -1,1 +1,53 @@
 TBD: sobald der Router wieder korrekt läuft
+
+HAProxy mit Docker - eigenes netzwerk verwenden! -> https://www.haproxy.com/blog/how-to-run-haproxy-with-docker
+
+1) eigenes netzwerk erstellen:
+$> sudo docker network create --driver=bridge haproxynetwork
+
+2) container im eigenen netzwerk laufen lassen:
+$ sudo docker run -d  --name echoServer1 --net haproxynetwork jmalloc/echo-server:latest
+
+
+HAProxy config file haproxy.cfg
+------------------------
+global
+  stats socket /var/run/api.sock user haproxy group haproxy mode 660 level admin expose-fd listeners
+  log stdout format raw local0 info
+
+defaults
+  mode http
+  timeout client 10s
+  timeout connect 5s
+  timeout server 10s
+  timeout http-request 10s
+  log global
+
+frontend stats
+  bind *:8404
+  stats enable
+  stats uri /
+  stats refresh 10s
+
+frontend myfrontend
+  bind :80
+  default_backend webservers
+
+backend webservers
+  server s1 web1:8080 check
+  server s2 web2:8080 check
+  server s3 web3:8080 check
+------------------------
+
+haproxy docker container laufen lassen:
+$> sudo docker run -d --name haproxy --net haproxynetwork -v $(pwd):/usr/local/etc/haproxy:ro -p 80:80 -p 8404:8404 haproxytech/haproxy-alpine:2.4
+$(pwd) ist current directory
+
+
+If you make a change to your haproxy.cfg file, you can reload the load balancer—without disrupting traffic—by calling the docker kill command:
+$> sudo docker kill -s HUP haproxy
+
+
+weitere configurationsdetails:
+
+
