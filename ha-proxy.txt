@@ -69,3 +69,8 @@ listen haproxy
   bind 0.0.0.0:443 ssl crt /etc/ssl/private/mydomain.pem
 
 
+
+proper setup directories for certificates: https://stackoverflow.com/questions/72137299/load-ssl-certificate-in-haproxy-with-docker-compose
+
+
+
