@@ -43,6 +43,9 @@ haproxy docker container laufen lassen:
 $> sudo docker run -d --name haproxy --net haproxynetwork -v $(pwd):/usr/local/etc/haproxy:ro -p 80:80 -p 8404:8404 haproxytech/haproxy-alpine:2.4
 $(pwd) ist current directory
 
+ohne netzwerk, mit verzeichnis 
+$> sudo docker run -d --name haproxy -v $(pwd)/haproxyconfig:/usr/local/etc/haproxy:ro -p 80:80 -p 8404:8404 haproxytech/haproxy-alpine:2.4
+
 
 If you make a change to your haproxy.cfg file, you can reload the load balancer—without disrupting traffic—by calling the docker kill command:
 $> sudo docker kill -s HUP haproxy
