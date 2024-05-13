@@ -1,1 +1,25 @@
-tbd
+
+
+https://docs.sonarsource.com/sonarqube/latest/setup-and-upgrade/install-the-server/installing-sonarqube-from-docker/
+
+Create the volumes with the following commands: 
+$> docker volume create --name sonarqube_data
+$> docker volume create --name sonarqube_logs
+$> docker volume create --name sonarqube_extensionstbd
+
+$ docker run --rm -p 9000:9000 -v sonarqube_extensions:/opt/sonarqube/extensions <image_name>
+<image_name> = sonarqube:8.9-community
+<image_name> = sonarqube:10.5-community
+
+bzw.:
+$> docker run -d --name sonarqube \
+    -p 9000:9000 \
+    -e SONAR_JDBC_URL=... \
+    -e SONAR_JDBC_USERNAME=... \
+    -e SONAR_JDBC_PASSWORD=... \
+    -v sonarqube_data:/opt/sonarqube/data \
+    -v sonarqube_extensions:/opt/sonarqube/extensions \
+    -v sonarqube_logs:/opt/sonarqube/logs \
+    <image_name>
+
+https://docs.sonarsource.com/sonarqube/latest/
