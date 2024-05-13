@@ -22,4 +22,7 @@ $> docker run -d --name sonarqube \
     -v sonarqube_logs:/opt/sonarqube/logs \
     <image_name>
 
+
+$> sudo docker run -d --name sonarqube -v sonarqube_data:/opt/sonarqube/data -v sonarqube_extensions:/opt/sonarqube/extensions -v sonarqube_logs:/opt/sonarqube/logs -p 9100:9000 --restart=always sonarqube:10.5-community
+
 https://docs.sonarsource.com/sonarqube/latest/
