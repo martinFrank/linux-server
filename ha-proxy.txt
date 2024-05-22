@@ -82,3 +82,39 @@ proper setup directories for certificates: https://stackoverflow.com/questions/7
 
 
 
+---------------beispiel config----------
+
+
+global
+  stats socket /var/run/api.sock user haproxy group haproxy mode 660 level admin expose-fd listeners
+  log stdout format raw local0 info
+
+defaults
+  mode http
+  timeout client 10s
+  timeout connect 5s
+  timeout server 10s
+  timeout http-request 10s
+  log global
+
+frontend stats
+  bind *:8404
+  stats enable
+  stats uri /
+  stats refresh 10s
+
+frontend myfrontend
+  bind :80
+
+  acl backend-path path_beg /idlenethack/backend/
+  use_backend idlenethack-backend if backend-path
+
+  default_backend idlenethack-frontend
+
+backend idlenethack-frontend
+  server idlenethack-frontend 192.168.0.253:3000
+
+backend idlenethack-backend
+  http-request replace-path /idlenethack/backend(/)?(.*) /\2
+  server idlenethack-backend 192.168.0.253:8088
+
