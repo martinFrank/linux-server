@@ -2,3 +2,10 @@
 
 
 $> sudo docker run -d --restart always --name poolserver-postgres -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres123 -e POSTGRES_DB=pool postgres
+
+
+one way to create databases in the docker image is using pgadmin:
+https://medium.com/@nathaliafriederichs/setting-up-a-postgresql-environment-in-docker-a-step-by-step-guide-55cbcb1061ba
+
+another way is using command shell:
+https://earthly.dev/blog/postgres-docker/
